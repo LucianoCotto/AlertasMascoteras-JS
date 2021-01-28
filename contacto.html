@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Contacto | Alertas Mascoteras</title>
+	<meta name="description" content="Ponerse en contacto con Alertas Mascoteras, por consultas, sugerencias, donaciones o voluntariados">
+    <meta name="keywords"  content="contacto alertas mascoteras, redes sociales alertas mascoteras, ubicacion alertas mascoteras">
+	<link rel="shortcut icon" type="image/png" href="img/favicon-32x32.png"/>
+	
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css" />
+		
+</head>
+
+<body id="contacto" class="page-contacto">
+
+
+	
+	<header id="header">
+		<nav id="nav" class="navbar navbar-expand-md">
+
+			<div class="topNav" id="topNav">
+				<button class="switch" id="switch">
+					<span><i class="fas fa-sun"></i></span>
+					<span><i class="fas fa-moon"></i></span>
+				</button>
+				<ul>
+					<li><a href="#" type="button" data-toggle="modal" data-target="#modalCrearCuenta">crear cuenta</a></li>
+					<li><a href="#" type="button" data-toggle="modal" data-target="#modalIniciarSesion">iniciar sesión</a></li>
+				</ul>
+			</div>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" 
+			data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" 
+			aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+			</button>
+			
+			<a href="index.html" class="navbar-brand">
+				<h1 id="logo">Alertas Mascoteras</h1>
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+				<ul class="navbar-nav">
+					<li class="nav-item"><a href="mascotas-perdidas.html" class="nav-link">Perdidas</a></li>
+					<li class="nav-item"><a href="mascotas-encontradas.html" class="nav-link">Encontradas</a></li>
+					<li class="nav-item"><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+					<li class="nav-item"><a href="contacto.html" class="nav-link active">Contacto</a></li>
+					<li class="nav-item"><a href="crear-alerta.html" class="nav-link">CREAR ALERTA</a></li>
+				</ul>
+			</div>
+
+		</nav>
+	</header> <!-- FIN DE Header-->
+
+	<!-- MODAL para Iniciar Sesión-->
+	<div class="modal fade" id="modalIniciarSesion" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+			<h4 class="modal-title" id="modalLabel">Iniciar Sesión</h4>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			</div>
+			<div class="modal-body">
+				<form id="formIniciarSesion">
+					<input type="text" placeholder="Nombre o Email" value="">
+					<input type="password" placeholder="Contraseña" value="">
+					<button type="submit" class="btn btn-md btn-secondary btn-block rounded-pill" data-dismiss="modal">INGRESAR</button>
+				</form>	
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-sm" data-dismiss="modal">¿Olvidaste tu Contraseña?</button> - 
+				<button type="button" class="btn btn-sm" data-dismiss="modal">¿Olvidaste tu Usuario?</button>
+			</div>
+		</div>
+		</div>
+	</div><!-- FIN de MODAL para Iniciar Sesión-->
+
+
+	<!-- MODAL para Crear Cuenta-->
+	<div class="modal fade" id="modalCrearCuenta" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+			<h4 class="modal-title" id="modalLabel">Crear Cuenta</h4>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			</div>
+			<div class="modal-body">
+				<form id="formCrearCuenta">
+					<input type="text" placeholder="Nombre" value="">
+					<input type="text" placeholder="Apellido" value="">
+					<input type="text" placeholder="Email" value="">
+					<input type="text" placeholder="Confirmar Email" value="">
+					
+					<input type="password" placeholder="Contraseña" value="">
+					<input type="password" placeholder="Confirmar Contraseña" value="">
+
+					<button type="submit" class="btn btn-md btn-secondary btn-block rounded-pill" data-dismiss="modal">CREAR CUENTA</button>
+				</form>	
+			</div>
+			<div class="modal-footer"> 
+				<button type="button" class="btn btn-sm" data-dismiss="modal">¿Necesitas Ayuda?</button> - 
+				<button type="button" class="btn btn-sm" data-dismiss="modal">Legales y Privacidad</button>
+			</div>
+		</div>
+		</div>
+	</div><!-- FIN de MODAL para Crear Cuenta-->
+
+
+
+	<div class="slider">
+		<h1><strong>CONTACTO</strong></h1>
+	</div> <!-- FIN DE Contacto Slider -->
+
+
+	<section class="container">
+		<article class="row">
+
+
+			<div class="col-sm-12 col-md-6 px-5 py-5">
+				<h3>ENVIANOS TUS CONSULTAS</h3>
+				<form id="formContacto">
+				
+				<input type="text" name="nombre" value="" placeholder="Nombre" />
+ 
+				<input type="text" name="apellido" value="" placeholder="Apellido" />
+ 
+				<input type="text" name="email" value="" placeholder="Email"/>
+ 
+				<input type="text" name="celular" value="" placeholder="Celular"/>
+ 
+				<textarea type="text" name="mensaje" value="" placeholder="Escribe tu mensaje aquí..."></textarea>
+ 
+				
+ 
+				<button type="submit" value="Limpiar">ENVIAR</button>
+				<button type="reset" value="Limpiar" class="float-right">LIMPIAR</button>
+
+				</form>
+
+			</div><!-- FIN DEL FORMULARIO -->
+
+
+			<div class="col-sm-12 col-md-6 pt-5 py-5 text-center">
+				<h4>Seguinos en redes Sociales</h4>
+				<ul class="list-inline mb-3" id="listaRedesContacto">
+					<li  class="list-inline-item"><a href="#"><i class="fab fa-facebook"></i></a></li>
+					<li  class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+					<li  class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+					<li  class="list-inline-item"><a href="#"><i class="fab fa-youtube"></i></a></li>
+				</ul>
+
+				<button type="button" class="btnContacto btn btn-md rounded-pill mb-5 w-100 "> ESCRIBINOS A <strong>contacto@alertamascotera.org.ar</strong></button>
+
+
+				<h4>Esta es nuestra localización:</h4>
+				<h5><strong>Tel.: 11 44 555 66 77</strong></h5>
+				<h5><strong>Av. Triunvirato 4292 | C.A.B.A. - Argentina</strong></h5>
+				</ul>
+				
+				<div id="contactoMapa" class="mt-5">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.0420881352497!2d-58.48367758477101!3d-34.5778015804662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb668c1952ac1%3A0x9b2ac9c00e049662!2sAv%20Triunvirato%204292%2C%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1601266737580!5m2!1ses-419!2sar" 
+					width="" height="" frameborder="0" style="border:0;" allowfullscreen="true" aria-hidden="false" tabindex="0"></iframe>
+				</div>
+
+			</div><!-- FIN DEL DATOS DE CONTACTO -->
+
+
+			
+
+		</article>
+
+	</section>
+
+
+	<!-- INICIO DE QueresDonar Section -->
+	<section class="queresDonar">
+		<article>
+			<h2>¿QUERÉS DONAR?</h2>
+			<p>Podés aportar con el botón de MercadoPago a continuación o escribinos a <a href="mailto:donar@alertamascotera.com.ar">donar@alertamascotera.com.ar</a> si querés hacernos una transferencia bancaria.</p>
+			<a class="btnDonar">DONAR CON MERCADOPAGO</a> 
+		</article>
+	</section>
+	<!-- FIN DE QueresDonar Section -->
+
+	<footer>
+		
+		<div class="padreGrid"> 
+
+			<div> <!-- Columna 1 de 3 -->
+				<h4>Seguinos en redes sociales y ayudanos a rescatar las mascotas perdida en todo CABA.</h4>
+				<ul>
+					<li><a href="#"><i class="fab fa-facebook"></i><span>Facebook</span></a></li>
+					<li><a href="#"><i class="fab fa-instagram"></i><span>Instagram</span></a></li>
+					<li><a href="#"><i class="fab fa-twitter"></i><span>Twitter</span></a></li>
+					<li><a href="#"><i class="fab fa-youtube"></i><span>Youtube</span></a></li>
+				</ul>
+			</div>
+
+
+			<div> <!-- Columna 2 de 3 -->
+				<h4>SUMATE A NUESTRO NEWSLETTER Y TODAS LAS SEMANAS TE MANTENDREMOS INFORMADO CON LAS ÚLTIMAS NOVEDADES</h4>
+				<form id="suscribirmeNewsletter" Action="" Method="POST" Enctype="">
+					<input type="text" name="nombre" placeholder="Nombre" value="" />
+					<input type="text" name="email" placeholder="Email" value="" />
+					<div class="custom-control custom-checkbox mt-2">
+						<input class="custom-control-input" type="checkbox" name="acepta" value="1"/>
+						<label class="custom-control-label" for="acepta">Acepto los términos de privacidad</label>
+					</div>
+					<hr>
+					<button class="btnReset" type="reset">LIMPIAR</button>
+					<button class="btnSubmit" type="submit">SUSCRIBIRME</button>
+				</form>
+			</div>
+
+			<div> <!-- Columna 3 de 3 -->
+				
+				<div class="back-to-top">
+				<a class="btnIrArriba" href="#top" onclick="$('html,body').animate({scrollTop:100},'slow');return false;">
+					<i class="fa fa-chevron-circle-up"></i>
+					IR ARRIBA
+				</a>
+				</div>
+			
+				<ul>
+					<li><a href="index.html"><i class="fas fa-paw"></i><span>INICIO</span></a></li>
+					<li><a href="masc-perdidas.html"><i class="fas fa-paw"></i><span>PERDIDAS</span></a></li>
+					<li><a href="masc-encontradas.html"><i class="fas fa-paw"></i><span>ENCONTRADAS</span></a></li>
+					<li><a href="nosotros.html"><i class="fas fa-paw"></i><span>NOSOTROS</span></a></li>
+					<li><a href="contacto.html"><i class="fas fa-paw"></i><span>CONTACTO</span></a></li>
+				</ul>
+			</div>
+
+		</div>
+
+		<div class="bottomFooter">
+			Alerta Mascotera 2020 <i class="far fa-copyright"></i> Copyright - Todos los derechos reservados | Diseño y Desarrollo: <a href="#">Luciano Cotto</a> 
+		</div>
+
+	</footer>	
+	
+	<script src="js/switch-lightdark.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+</body>
+</html>

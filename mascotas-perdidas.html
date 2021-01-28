@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta http-equiv=”Content-Type” content=”text/html; charset=UTF-8″ />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	
+	<title>Mascotas Perdidas . Alertas Mascoteras</title>
+	<meta name="description" content="Buscador de mascotas perdidas dentro del territorio de CABA">
+    <meta name="keywords"  content="mascotas perdidas, perros perdidos, gatos perdidos, mascotas perdidas CABA">
+	<link rel="shortcut icon" type="image/png" href="img/favicon-32x32.png"/>
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body id="mascPerdidas" class="page-perdidas">
+	
+	<header id="header">
+		<nav id="nav" class="navbar navbar-expand-md">
+
+			<div class="topNav" id="topNav">
+				<button class="switch" id="switch">
+					<span><i class="fas fa-sun"></i></span>
+					<span><i class="fas fa-moon"></i></span>
+				</button>
+				<ul>
+					<li><a href="#" type="button" data-toggle="modal" data-target="#modalCrearCuenta">crear cuenta</a></li>
+					<li><a href="#" type="button" data-toggle="modal" data-target="#modalIniciarSesion">iniciar sesión</a></li>
+				</ul>
+			</div>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" 
+			data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" 
+			aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+			</button>
+			
+			<a href="index.html" class="navbar-brand">
+				<h1 id="logo">Alertas Mascoteras</h1>
+			</a>
+
+			<div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+				<ul class="navbar-nav">
+					<li class="nav-item"><a href="mascotas-perdidas.html" class="nav-link active">Perdidas</a></li>
+					<li class="nav-item"><a href="mascotas-encontradas.html" class="nav-link">Encontradas</a></li>
+					<li class="nav-item"><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+					<li class="nav-item"><a href="contacto.html" class="nav-link">Contacto</a></li>
+					<li class="nav-item"><a href="crear-alerta.html" class="nav-link">CREAR ALERTA</a></li>
+				</ul>
+			</div>
+
+		</nav>
+	</header> <!-- FIN DE Header-->
+
+	<!-- MODAL para Iniciar Sesión-->
+	<div class="modal fade" id="modalIniciarSesion" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+			<h4 class="modal-title" id="modalLabel">Iniciar Sesión</h4>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			</div>
+			<div class="modal-body">
+				<form id="formIniciarSesion">
+					<input type="text" placeholder="Nombre o Email" value="">
+					<input type="password" placeholder="Contraseña" value="">
+					<button type="submit" class="btn btn-md btn-secondary btn-block rounded-pill" data-dismiss="modal">INGRESAR</button>
+				</form>	
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-sm" data-dismiss="modal">¿Olvidaste tu Contraseña?</button> - 
+				<button type="button" class="btn btn-sm" data-dismiss="modal">¿Olvidaste tu Usuario?</button>
+			</div>
+		</div>
+		</div>
+	</div><!-- FIN de MODAL para Iniciar Sesión-->
+
+
+	<!-- MODAL para Crear Cuenta-->
+	<div class="modal fade" id="modalCrearCuenta" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+			<h4 class="modal-title" id="modalLabel">Crear Cuenta</h4>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			</div>
+			<div class="modal-body">
+				<form id="formCrearCuenta">
+					<input type="text" placeholder="Nombre" value="">
+					<input type="text" placeholder="Apellido" value="">
+					<input type="text" placeholder="Email" value="">
+					<input type="text" placeholder="Confirmar Email" value="">
+					
+					<input type="password" placeholder="Contraseña" value="">
+					<input type="password" placeholder="Confirmar Contraseña" value="">
+
+					<button type="submit" class="btn btn-md btn-secondary btn-block rounded-pill" data-dismiss="modal">CREAR CUENTA</button>
+				</form>	
+			</div>
+			<div class="modal-footer"> 
+				<button type="button" class="btn btn-sm" data-dismiss="modal">¿Necesitas Ayuda?</button> - 
+				<button type="button" class="btn btn-sm" data-dismiss="modal">Legales y Privacidad</button>
+			</div>
+		</div>
+		</div>
+	</div><!-- FIN de MODAL para Crear Cuenta-->
+
+	<div class="slider">
+
+		<h1>Estas son las mascotas perdidas, si encontraste una y no la ves <br><strong>CREÁ UNA ALERTA COMO ENCONTRADA <a href="crear-alerta.html">AHORA</a></strong></h1>
+		
+	</div> <!-- FIN DE Slider Home -->
+
+
+	<section class="container">
+		<article>
+			
+			<!-- INICIO del Buscador/Filtro -->
+			<div id="BuscadorFiltro" class="row BuscadorFiltroAlertasWrap">
+	
+				<div class="col-sm-12">	
+					<h2>Buscador de Alertas:</h2>
+					<ul>
+						<li><a href="index.html#BuscadorFiltro">Todas</a></li>
+						<li><a href="mascotas-perdidas.html#BuscadorFiltro" class="active">Perdidas</a></li>
+						<li><a href="mascotas-encontradas.html#BuscadorFiltro">Encontradas</a></li>
+					</ul>	
+				</div>
+
+				<div class="col-sm-12">
+					
+					<form id="BuscadorFiltroAlertasForm" class="row">
+
+						<div class="col-12">
+							<h3>Filtro</h3>
+							<hr>
+						</div>
+						
+						<div class="col-sm-12 col-md-3 p-2">	
+							<label for="barrio">¿En que barrio?</label>
+							
+							<select name="barrio">
+								<option type="radio" value="sinseleccion">-seleciona una opción-</option>
+								<option value="agronomía">Agronomía</option>
+								<option value="almagro">Almagro</option>
+								<option value="balvanera">Balvanera</option>
+								<option value="barracas">Barracas</option>
+								<option value="belgrano">Belgrano</option>
+								<option value="boedo">Boedo</option>
+								<option value="caballito">Caballito</option>
+								<option value="chacarita">Chacarita</option>
+								<option value="coghlan">Coghlan</option>
+								<option value="colegiales">Colegiales</option>
+								<option value="constitucion">Constitución</option>
+								<option value="flores">Flores</option>
+								<option value="floresta">Floresta</option>
+								<option value="laboca">La Boca</option>
+								<option value="lapaternal">La Paternal</option>
+								<option value="liniers">Liniers</option>
+								<option value="mataderos">Mataderos</option>
+								<option value="montecastro">Monte Castro</option>
+								<option value="montserrat">Montserrat</option>
+								<option value="nuevapompeya">Nueva Pompeya</option>
+								<option value="nunez">Nuñez</option>
+								<option value="palermo">Palermo</option>
+								<option value="parqueavellaneda">Parque Avellaneda</option>
+								<option value="parquechacabuco">Parque Chacabuco</option>
+								<option value="parquechas">Parque Chas</option>
+								<option value="parquepatricios">Parque Patricios</option>
+								<option value="puertomadero">Puerto Madero</option>
+								<option value="recoleta">Recoleta</option>
+								<option value="retiro">Retiro</option>
+								<option value="saavedra">Saavedra</option>
+								<option value="sancristobal">San Cristóbal</option>
+								<option value="sannicolas">San Nicolas</option>
+								<option value="santelmo">San Telmo</option>
+								<option value="versalles">Versalles</option>
+								<option value="villacrespo">Villa Crespo</option>
+								<option value="villadevoto">Villa Devoto</option>
+								<option value="villageneralmitre">Villa General Mitre</option>
+								<option value="villalugano">Villa Lugano</option>
+								<option value="villaluro">Villa Luro</option>
+								<option value="villaortuzar">Villa Ortúzar</option>
+								<option value="villapueyrredon">Villa Pueyrredón</option>
+								<option value="villareal">Villa Real</option>
+								<option value="villariachuelo">Villa Riachuelo</option>
+								<option value="villasantarita">Villa Santa Rita</option>
+								<option value="villasoldati">Villa Soldati</option>
+								<option value="villaurquiza">Villa Urquiza</option>
+								<option value="villadelparque">Villa del Parque</option>
+								<option value="velezsarsfield">Vélez Sarsfield</option>
+							</select>
+						</div>
+
+						<div class="col-sm-12 col-md-3 p-2">
+						<label for="especie">¿Perro o Gato?</label>
+						<select name="especie">
+							<option type="radio" value="sinseleccion">-seleciona una opción-</option>
+							<option type="radio" value="perro" >Perro</option>
+							<option type="radio" value="gato" >Gato</option> 
+						</select>
+						</div>
+
+						<div class="col-sm-12 col-md-3 p-2">
+						<label for="fecha">¿En qué fecha fue...?</label>	
+						<input type="date" name="fecha">
+						</div>
+
+						<div class="col-sm-12 col-md-3 p-2">
+						<label for="sexo">¿Macho o Hembra?</label>
+						<select name="sexo">
+							<option type="radio" value="sinseleccion">-seleciona una opción-</option>
+							<option type="radio" value="macho">Macho</option>
+							<option type="radio" value="hembra">Hembra</option> 
+						</select>
+						</div>
+						<button type="submit" value="REALIZAR BÚSQUEDA" class="mx-auto mt-2 mb-n5"><i class="fas fa-filter mr-2"></i>FILTRAR</button>
+
+					</form>
+				</div>
+
+			</div>
+			<!-- FIN del Buscador/Filtro -->
+
+
+			<!-- INICIO GRILLA DE CARDS "Alertas"  -->
+			<div class="grillaCards">
+					
+	
+				<div class="card">
+					<div class="AlertaImg">
+						
+						<div class="tag-perdido">PERDIDO</div>
+						<div class="tag-gato">GATO</div>
+
+						<div id="alerta-0002" class="carousel slide"  >
+							<ol class="carousel-indicators">
+								<li data-target="#alerta-0002" data-slide-to="0" class="active"></li>
+								<li data-target="#alerta-0002" data-slide-to="1"></li>
+								<li data-target="#alerta-0002" data-slide-to="2"></li>
+							</ol>
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+								<img class="d-block w-100" src="img/AlertasImg/gato-001-a.jpg" alt="Perro 01">
+								</div>
+								<div class="carousel-item">
+								<img class="d-block w-100" src="img/AlertasImg/gato-001-b.jpg" alt="Perro 01">
+								</div>
+								<div class="carousel-item">
+								<img class="d-block w-100" src="img/AlertasImg/gato-001-c.jpg" alt="Perro 01">
+								</div>
+							</div>
+							<a class="carousel-control-prev" href="#alerta-0002" role="button" data-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							</a>
+							<a class="carousel-control-next" href="#alerta-0002" role="button" data-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							</a>
+						</div>
+
+
+					</div>
+					<table border="0" cellspacing="0" cellpadding="10">
+						<tr>
+							<td><i class="fas fa-map-marked-alt"></i></td>
+							<td>San Cristobal</td>
+						</tr>
+						<tr>
+							<td><i class="fas fa-map-pin"></i></td>
+							<td>Solis y San Juan</td>
+						</tr>
+						<tr>
+							<td><i class="fas fa-venus-mars"></i></td>
+							<td>Macho</td>
+						</tr>
+						<tr>
+							<td><i class="fas fa-calendar-day"></i></td>
+							<td>viernes 13 / 10 / 2020</td>
+						</tr>
+					</table>
+					<a href="#" class="verAlerta">VER ALERTA COMPLETA</a>
+				</div>
+			
+
+				<div class="card">
+					<div class="AlertaImg">
+						<div class="tag-perdido">PERDIDO</div>
+						<div class="tag-perro">PERRO</div>
+
+						<div id="alerta-0003" class="carousel slide"  >
+							<ol class="carousel-indicators">
+								<li data-target="#alerta-0003" data-slide-to="0" class="active"></li>
+								<li data-target="#alerta-0003" data-slide-to="1"></li>
+								<li data-target="#alerta-0003" data-slide-to="2"></li>
+							</ol>
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+								<img class="d-block w-100" src="img/AlertasImg/perro-002-a.jpg" alt="Perro 02">
+								</div>
+								<div class="carousel-item">
+								<img class="d-block w-100" src="img/AlertasImg/perro-002-b.jpg" alt="Perro 02">
+								</div>
+								<div class="carousel-item">
+								<img class="d-block w-100" src="img/AlertasImg/perro-002-c.jpg" alt="Perro 02">
+								</div>
+							</div>
+							<a class="carousel-control-prev" href="#alerta-0003" role="button" data-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							</a>
+							<a class="carousel-control-next" href="#alerta-0003" role="button" data-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							</a>
+						</div>
+
+					</div>
+					<table border="0" cellspacing="0" cellpadding="10">
+						<tr>
+							<td><i class="fas fa-map-marked-alt"></i></td>
+							<td>San Cristobal</td>
+						</tr>
+						<tr>
+							<td><i class="fas fa-map-pin"></i></td>
+							<td>Solis y San Juan</td>
+						</tr>
+						<tr>
+							<td><i class="fas fa-venus-mars"></i></td>
+							<td>Hembra</td>
+						</tr>
+						<tr>
+							<td><i class="fas fa-calendar-day"></i></td>
+							<td>martes 3 / 9 / 2020</td>
+						</tr>
+					</table>
+					<a href="#" class="verAlerta">VER ALERTA COMPLETA</a>
+				</div>
+
+
+				<div class="card">
+					<div class="AlertaImg">
+						
+						<div class="tag-perdido">PERDIDO</div>
+						<div class="tag-gato">GATO</div>
+
+						<div id="alerta-0005" class="carousel slide"  >
+							<ol class="carousel-indicators">
+								<li data-target="#alerta-0005" data-slide-to="0" class="active"></li>
+								<li data-target="#alerta-0005" data-slide-to="1"></li>
+								<li data-target="#alerta-0005" data-slide-to="2"></li>
+							</ol>
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+								<img class="d-block w-100" src="img/AlertasImg/gato-003-a.jpg" alt="Gato 3">
+								</div>
+								<div class="carousel-item">
+								<img class="d-block w-100" src="img/AlertasImg/gato-003-b.jpg" alt="Gato 3">
+								</div>
+								<div class="carousel-item">
+								<img class="d-block w-100" src="img/AlertasImg/gato-003-c.jpg" alt="Gato 3">
+								</div>
+							</div>
+							<a class="carousel-control-prev" href="#alerta-0005" role="button" data-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							</a>
+							<a class="carousel-control-next" href="#alerta-0005" role="button" data-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							</a>
+						</div>
+
+					</div>
+					<table border="0" cellspacing="0" cellpadding="10">
+						<tr>
+							<td><i class="fas fa-map-marked-alt"></i></td>
+							<td>San Cristobal</td>
+						</tr>
+						<tr>
+							<td><i class="fas fa-map-pin"></i></td>
+							<td>Solis y San Juan</td>
+						</tr>
+						<tr>
+							<td><i class="fas fa-venus-mars"></i></td>
+							<td>Macho</td>
+						</tr>
+						<tr>
+							<td><i class="fas fa-calendar-day"></i></td>
+							<td>viernes 13 / 10 / 2020</td>
+						</tr>
+					</table>
+					<a href="#" class="verAlerta">VER ALERTA COMPLETA</a>
+				</div>
+
+
+				<div class="card">
+					<div class="AlertaImg">
+						<div class="tag-perdido">PERDIDO</div>
+						<div class="tag-gato">GATO</div>
+						
+						<div id="alerta-0006" class="carousel slide"  >
+							<ol class="carousel-indicators">
+								<li data-target="#alerta-0006" data-slide-to="0" class="active"></li>
+								<li data-target="#alerta-0006" data-slide-to="1"></li>
+								<li data-target="#alerta-0006" data-slide-to="2"></li>
+							</ol>
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+								<img class="d-block w-100" src="img/AlertasImg/gato-001-a.jpg" alt="Gato 1">
+								</div>
+								<div class="carousel-item">
+								<img class="d-block w-100" src="img/AlertasImg/gato-001-b.jpg" alt="Gato 1">
+								</div>
+								<div class="carousel-item">
+								<img class="d-block w-100" src="img/AlertasImg/gato-001-c.jpg" alt="Gato 1">
+								</div>
+							</div>
+							<a class="carousel-control-prev" href="#alerta-0006" role="button" data-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							</a>
+							<a class="carousel-control-next" href="#alerta-0006" role="button" data-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							</a>
+						</div>
+
+
+					</div>
+					<table border="0" cellspacing="0" cellpadding="5">
+						<tr>
+							<td><i class="fas fa-map-marked-alt"></i></td>
+							<td>San Cristobal</td>
+						</tr>
+						<tr>
+							<td><i class="fas fa-map-pin"></i></td>
+							<td>Solis y San Juan</td>
+						</tr>
+						<tr>
+							<td><i class="fas fa-venus-mars"></i></td>
+							<td>Hembra</td>
+						</tr>
+						<tr>
+							<td><i class="fas fa-calendar-day"></i></td>
+							<td>martes 3 / 9 / 2020</td>
+						</tr>
+					</table>
+					<a href="#" class="verAlerta">VER ALERTA COMPLETA</a>
+				</div>
+				
+				
+				<div class="card">
+					<div class="AlertaImg">
+						
+						<div class="tag-perdido">PERDIDO</div>
+						<div class="tag-perro">PERRO</div>
+
+						<div id="alerta-0007" class="carousel slide"  >
+							<ol class="carousel-indicators">
+								<li data-target="#alerta-0007" data-slide-to="0" class="active"></li>
+								<li data-target="#alerta-0007" data-slide-to="1"></li>
+								<li data-target="#alerta-0007" data-slide-to="2"></li>
+							</ol>
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+								<img class="d-block w-100" src="img/AlertasImg/perro-001-a.jpg" alt="Perro 1">
+								</div>
+								<div class="carousel-item">
+								<img class="d-block w-100" src="img/AlertasImg/perro-001-b.jpg" alt="Perro 1">
+								</div>
+								<div class="carousel-item">
+								<img class="d-block w-100" src="img/AlertasImg/perro-001-c.jpg" alt="Perro 1">
+								</div>
+							</div>
+							<a class="carousel-control-prev" href="#alerta-0007" role="button" data-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							</a>
+							<a class="carousel-control-next" href="#alerta-0007" role="button" data-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							</a>
+						</div>
+
+
+					</div>
+					<table border="0" cellspacing="0" cellpadding="10">
+						<tr>
+							<td><i class="fas fa-map-marked-alt"></i></td>
+							<td>San Cristobal</td>
+						</tr>
+						<tr>
+							<td><i class="fas fa-map-pin"></i></td>
+							<td>Solis y San Juan</td>
+						</tr>
+						<tr>
+							<td><i class="fas fa-venus-mars"></i></td>
+							<td>Macho</td>
+						</tr>
+						<tr>
+							<td><i class="fas fa-calendar-day"></i></td>
+							<td>viernes 13 / 10 / 2020</td>
+						</tr>
+					</table>
+					<a href="#" class="verAlerta">VER ALERTA COMPLETA</a>
+				</div>
+				
+
+				<div class="card">
+					<div class="AlertaImg">
+						
+						<div class="tag-perdido">PERDIDO</div>
+						<div class="tag-gato">GATO</div>
+
+						<div id="alerta-0008" class="carousel slide"  >
+							<ol class="carousel-indicators">
+								<li data-target="#alerta-0008" data-slide-to="0" class="active"></li>
+								<li data-target="#alerta-0008" data-slide-to="1"></li>
+								<li data-target="#alerta-0008" data-slide-to="2"></li>
+							</ol>
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+								<img class="d-block w-100" src="img/AlertasImg/gato-002-a.jpg" alt="Gato 2">
+								</div>
+								<div class="carousel-item">
+								<img class="d-block w-100" src="img/AlertasImg/gato-002-b.jpg" alt="Gato 2">
+								</div>
+								<div class="carousel-item">
+								<img class="d-block w-100" src="img/AlertasImg/gato-002-c.jpg" alt="Gato 2">
+								</div>
+							</div>
+							<a class="carousel-control-prev" href="#alerta-0008" role="button" data-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							</a>
+							<a class="carousel-control-next" href="#alerta-0008" role="button" data-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							</a>
+						</div>
+
+
+					</div>
+					<table border="0" cellspacing="0" cellpadding="10">
+						<tr>
+							<td><i class="fas fa-map-marked-alt"></i></td>
+							<td>San Cristobal</td>
+						</tr>
+						<tr>
+							<td><i class="fas fa-map-pin"></i></td>
+							<td>Solis y San Juan</td>
+						</tr>
+						<tr>
+							<td><i class="fas fa-venus-mars"></i></td>
+							<td>Macho</td>
+						</tr>
+						<tr>
+							<td><i class="fas fa-calendar-day"></i></td>
+							<td>viernes 13 / 10 / 2020</td>
+						</tr>
+					</table>
+					<a href="#" class="verAlerta">VER ALERTA COMPLETA</a>
+				</div>
+
+				<div class="card">
+					<div class="AlertaImg">
+						
+						<div class="tag-perdido">PERDIDO</div>
+						<div class="tag-gato">GATO</div>
+
+						<div id="alerta-0005" class="carousel slide"  >
+							<ol class="carousel-indicators">
+								<li data-target="#alerta-0005" data-slide-to="0" class="active"></li>
+								<li data-target="#alerta-0005" data-slide-to="1"></li>
+								<li data-target="#alerta-0005" data-slide-to="2"></li>
+							</ol>
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+								<img class="d-block w-100" src="img/AlertasImg/gato-003-a.jpg" alt="Gato 3">
+								</div>
+								<div class="carousel-item">
+								<img class="d-block w-100" src="img/AlertasImg/gato-003-b.jpg" alt="Gato 3">
+								</div>
+								<div class="carousel-item">
+								<img class="d-block w-100" src="img/AlertasImg/gato-003-c.jpg" alt="Gato 3">
+								</div>
+							</div>
+							<a class="carousel-control-prev" href="#alerta-0005" role="button" data-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							</a>
+							<a class="carousel-control-next" href="#alerta-0005" role="button" data-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							</a>
+						</div>
+
+					</div>
+					<table border="0" cellspacing="0" cellpadding="10">
+						<tr>
+							<td><i class="fas fa-map-marked-alt"></i></td>
+							<td>San Cristobal</td>
+						</tr>
+						<tr>
+							<td><i class="fas fa-map-pin"></i></td>
+							<td>Solis y San Juan</td>
+						</tr>
+						<tr>
+							<td><i class="fas fa-venus-mars"></i></td>
+							<td>Macho</td>
+						</tr>
+						<tr>
+							<td><i class="fas fa-calendar-day"></i></td>
+							<td>viernes 13 / 10 / 2020</td>
+						</tr>
+					</table>
+					<a href="#" class="verAlerta">VER ALERTA COMPLETA</a>
+				</div>
+
+				<div class="card">
+					<div class="AlertaImg">
+						
+						<div class="tag-perdido">PERDIDO</div>
+						<div class="tag-gato">GATO</div>
+
+						<div id="alerta-0002" class="carousel slide"  >
+							<ol class="carousel-indicators">
+								<li data-target="#alerta-0002" data-slide-to="0" class="active"></li>
+								<li data-target="#alerta-0002" data-slide-to="1"></li>
+								<li data-target="#alerta-0002" data-slide-to="2"></li>
+							</ol>
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+								<img class="d-block w-100" src="img/AlertasImg/gato-001-a.jpg" alt="Perro 01">
+								</div>
+								<div class="carousel-item">
+								<img class="d-block w-100" src="img/AlertasImg/gato-001-b.jpg" alt="Perro 01">
+								</div>
+								<div class="carousel-item">
+								<img class="d-block w-100" src="img/AlertasImg/gato-001-c.jpg" alt="Perro 01">
+								</div>
+							</div>
+							<a class="carousel-control-prev" href="#alerta-0002" role="button" data-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							</a>
+							<a class="carousel-control-next" href="#alerta-0002" role="button" data-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							</a>
+						</div>
+
+
+					</div>
+					<table border="0" cellspacing="0" cellpadding="10">
+						<tr>
+							<td><i class="fas fa-map-marked-alt"></i></td>
+							<td>San Cristobal</td>
+						</tr>
+						<tr>
+							<td><i class="fas fa-map-pin"></i></td>
+							<td>Solis y San Juan</td>
+						</tr>
+						<tr>
+							<td><i class="fas fa-venus-mars"></i></td>
+							<td>Macho</td>
+						</tr>
+						<tr>
+							<td><i class="fas fa-calendar-day"></i></td>
+							<td>viernes 13 / 10 / 2020</td>
+						</tr>
+					</table>
+					<a href="#" class="verAlerta">VER ALERTA COMPLETA</a>
+				</div>
+
+			</div>
+			<!-- FIN GRILLA DE CARDS "Alertas"  -->
+
+			<div class="paginacion">
+				<ul>
+					<li><a href="#" class="active">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">siguientes ></a></li>
+				</ul>
+			</div>
+
+		</article>
+	</section>
+
+	<!-- INICIO DE QueresDonar Section -->
+	<section class="queresDonar">
+		<article>
+			<h2>¿QUERÉS DONAR?</h2>
+			<p>Podés aportar con el botón de MercadoPago a continuación o escribinos a <a href="mailto:donar@alertamascotera.com.ar">donar@alertamascotera.com.ar</a> si querés hacernos una transferencia bancaria.</p>
+			<a class="btnDonar">DONAR CON MERCADOPAGO</a> 
+		</article>
+	</section>
+	<!-- FIN DE QueresDonar Section -->
+
+	<footer>
+		
+		<div class="padreGrid"> 
+
+			<div> <!-- Columna 1 de 3 -->
+				<h4>Seguinos en redes sociales y ayudanos a rescatar las mascotas perdida en todo CABA.</h4>
+				<ul>
+					<li><a href="#"><i class="fab fa-facebook"></i><span>Facebook</span></a></li>
+					<li><a href="#"><i class="fab fa-instagram"></i><span>Instagram</span></a></li>
+					<li><a href="#"><i class="fab fa-twitter"></i><span>Twitter</span></a></li>
+					<li><a href="#"><i class="fab fa-youtube"></i><span>Youtube</span></a></li>
+				</ul>
+			</div>
+
+
+			<div> <!-- Columna 2 de 3 -->
+				<h4>SUMATE A NUESTRO NEWSLETTER Y TODAS LAS SEMANAS TE MANTENDREMOS INFORMADO CON LAS ÚLTIMAS NOVEDADES</h4>
+				<form id="suscribirmeNewsletter" Action="" Method="POST" Enctype="">
+					<input type="text" name="nombre" placeholder="Nombre" value="" />
+					<input type="text" name="email" placeholder="Email" value="" />
+					<div class="custom-control custom-checkbox mt-2">
+						<input class="custom-control-input" type="checkbox" name="acepta" value="1"/>
+						<label class="custom-control-label" for="acepta">Acepto los términos de privacidad</label>
+					</div>
+					<hr>
+					<button class="btnReset" type="reset">LIMPIAR</button>
+					<button class="btnSubmit" type="submit">SUSCRIBIRME</button>
+				</form>
+			</div>
+
+			<div> <!-- Columna 3 de 3 -->
+				
+				<div class="back-to-top">
+				<a class="btnIrArriba" href="#top" onclick="$('html,body').animate({scrollTop:100},'slow');return false;">
+					<i class="fa fa-chevron-circle-up"></i>
+					IR ARRIBA
+				</a>
+				</div>
+			
+				<ul>
+					<li><a href="index.html"><i class="fas fa-paw"></i><span>INICIO</span></a></li>
+					<li><a href="masc-perdidas.html"><i class="fas fa-paw"></i><span>PERDIDAS</span></a></li>
+					<li><a href="masc-encontradas.html"><i class="fas fa-paw"></i><span>ENCONTRADAS</span></a></li>
+					<li><a href="nosotros.html"><i class="fas fa-paw"></i><span>NOSOTROS</span></a></li>
+					<li><a href="contacto.html"><i class="fas fa-paw"></i><span>CONTACTO</span></a></li>
+				</ul>
+			</div>
+
+		</div>
+
+		<div class="bottomFooter">
+			Alerta Mascotera 2020 <i class="far fa-copyright"></i> Copyright - Todos los derechos reservados | Diseño y Desarrollo: <a href="#">Luciano Cotto</a> 
+		</div>
+
+	</footer>
+	
+	
+	<script src="js/switch-lightdark.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+</body>
+</html>
