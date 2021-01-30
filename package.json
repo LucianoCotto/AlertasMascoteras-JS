@@ -1,18 +1,26 @@
 {
-  "name": "alertasmascoteras-cotto",
+  "name": "alertasmascoteras-js",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "npm run watch:all",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "node-sass --include-path scss scss/style.scss css/style.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucianoCotto/AlertasMascoteras-JS.git"
+  },
   "author": "LucianoCotto",
   "license": "ISC",
-  "dependecies":{
-    "node-sass": "^4.14.1",
-    "nodemon": "^2.0.6"
+  "bugs": {
+    "url": "https://github.com/LucianoCotto/AlertasMascoteras-JS/issues"
+  },
+  "homepage": "https://github.com/LucianoCotto/AlertasMascoteras-JS#readme",
+  "devDependencies": {
+    "node-sass": "^5.0.0",
+    "nodemon": "^2.0.7"
   }
- 
 }
