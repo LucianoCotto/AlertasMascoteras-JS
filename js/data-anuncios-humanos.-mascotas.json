@@ -1,0 +1,62 @@
+[
+    {
+        "Nombre" : "Carolina",
+        "Apellido": "García",
+        "Email" : "carolinagarcia@gmail.com",
+        "Celular" : 5491143332222,
+        "HumanoID" : ["H",1]
+    },
+
+    {
+        "Nombre" : "Sergio",
+        "Apellido": "Casco",
+        "Email" : "sergiocasco@gmail.com",
+        "Celular" : 5491156667777,
+        "HumanoID" : ["H",2]
+    },
+
+    {
+        "Especie" : "Gato",
+        "Raza" : "Siamés",
+        "Sexo" : "Hembra",
+        "Colores" : ["negro", "beige"],
+        "MascotaID" : ["MG",1]
+    },
+
+    {
+        "Especie" : "Perro",
+        "Raza" : "Callejero",
+        "Sexo" : "Macho",
+        "Colores" : ["negro", "blanco", "beige"],
+        "MascotaID" : ["MP",1]
+    },
+
+    {
+        "anuncioTipo" : "Perdida",
+        "comentarioAnuncio" : "Es muy viejita y necesita medicación diaria.",
+        "fotosAnuncio" : ["foto-1.jpg","foto-2.jpg","foto-3.jpg"],
+        "fechaPerdida" : "",
+        "fechaEncontrada" : "",
+        "barrioCaba" : "Villa Crespo",
+        "callePrincipal" : "Av. Corrientes",
+        "calleEntreUno" : "Salguero",
+        "calleEntreDos" : "Medrano",
+        "humanoID" : ["H",1],
+        "mascotaID" : ["MG",1],
+        "anuncioID" : "AN-1"
+    },
+    {
+        "anuncioTipo" : "Encontrada",
+        "comentarioAnuncio" : "Tiene chapita con un teléfono pero nadie atiende cuando llamamos",
+        "fotosAnuncio" : ["foto-1.jpg","foto-2.jpg","foto-3.jpg"],
+        "fechaPerdida" : "",
+        "fechaEncontrada" : "",
+        "barrioCaba" : "",
+        "callePrincipal" : "",
+        "calleEntreUno" : "",
+        "calleEntreDos" : "",
+        "humanoID" : ["H",2],
+        "mascotaID" : ["MP",1],
+        "anuncioID" : "AN-2"
+    }
+]
