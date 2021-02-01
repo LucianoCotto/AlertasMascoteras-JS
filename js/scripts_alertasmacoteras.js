@@ -131,9 +131,7 @@ function NuevoAnuncio(paramTipoAnuncio, paramComentAnuncio, paraFotosAnuncio, pa
         //
         this.humanoID = getHumanoID();
         this.mascotaID = getMascotaID();
-        this.getHumanoID = function(humanoID) {
-            return "HumanoID: " + this.humanoID;
-        }
+
         this.getMascotaID = function(mascotaID) {
             return "MascotaID: " + this.mascotaID;
         }
