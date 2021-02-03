@@ -15,59 +15,52 @@ PAGE >> https://lucianocotto.github.io/AlertasMascoteras-JS/crear-alerta.html
     Es el Objeto GRID-CARDS en index.html,
     que tendrá un Filtro de "perdidas", "encontradas", .
 
-2) Persona (Usuario) -objeto-
-    -propiedades- PersonaID | Nombre | Apellido | Email | Celular
+2) Humano (Usuario/Persona) -objeto-
+    -propiedades- HumanoID | Nombre | Apellido | Email | Celular
 
 3) Mascota -objeto-
     Perro -objeto-
-    -propiedades- Raza | Sexo | Colores | PersonaID | MascotaID
+    -propiedades- Raza | Sexo | Colores | HumanoID | MascotaID
     
     Gato -objeto-
-    -propiedades- Raza | Sexo | Colores | PersonaID | MascotaID
+    -propiedades- Raza | Sexo | Colores | HumanoID | MascotaID
 
 4) Anuncio -objeto-
     AnuncioID    
     TipoAnuncio
     -propiedades- Perdidas | Encontradas
     Mensaje
-    == PersonaID
+    == HumanoID
     == MascotaID
 */
 
-// // // // // // // // // //
-// ARRAYS DE OBJETOS PRINCIPALES //
-// // // // // // // // // //
 
-let myArrayPersonas = [];
-let myArrayMascotas = [];
-let myArrayAnuncios = [];
 
 // // // // // // // // // //
 // FUNCIONES CONSTRUCTORAS //
 // // // // // // // // // //
 
 // FUNCIÒN CONSTRUCTORA "Nuevo Gato"
-function NuevaPersona(paramNombrePersona, paramApellidoPersona, paramCelularPersona, paramEmailPersona){
+function NuevoHumano(paramNombreHumano, paramApellidoHumano, paramCelularHumano, paramEmailHumano){
     
-    // Parámetros del PERSONA
+    // Parámetros del HUMANO
     
     // Datos Privado
-    var personaID = Symbol.for('hid-');
-    this.getPersonaID = function(personaID) {
-        return "PersonaID: " + this.personaID;
+    var humanoID = Symbol.for('hid-');
+    this.getHumanoID = function(humanoID) {
+        return "HumanoID: " + this.humanoID;
     } 
     // Datos Públicos
-    this.nombrePersona = paramNombrePersona;
-    this.apellidoPersona = paramApellidoPersona;
-    this.celularPersona = paramCelularPersona;
-    this.emailPersonao = paramEmailPersona;
+    this.nombreHumano = paramNombreHumano;
+    this.apellidoHumano = paramApellidoHumano;
+    this.celularHumano = paramCelularHumano;
+    this.emailHumano = paramEmailHumano;
 
-    return getPersonaID();
 }
-var paramNombrePersona = document.getElementById("nombre");
-var paramApellidoPersona = document.getElementById("nombre");
-var paramCelularPersona = document.getElementById("celular");
-var paramEmailPersona = document.getElementById("email");
+var paramNombreHumano = document.getElementById("nombre");
+var paramApellidoHumano = document.getElementById("nombre");
+var paramCelularHumano = document.getElementById("celular");
+var paramEmailHumano = document.getElementById("email");
 
 
 // FUNCIÒN CONSTRUCTORA "Nuevo Perro"
@@ -78,9 +71,8 @@ function NuevoPerro(paraEspecieMascota, paraRazaMascota, paraSexoMascota, paraCo
     // Datos Privado
     var mascotaID = Symbol.for('mpid-');
     this.getMascotaID = function(mascotaID) {
-        return this.mascotaID;
+        return "MascotaID: " + this.mascotaID;
     }
-
     // Datos Pùblico
     this.especieMascota = paraEspecieMascota;
     this.razaMascota = paraRazaMascota;
@@ -90,9 +82,6 @@ function NuevoPerro(paraEspecieMascota, paraRazaMascota, paraSexoMascota, paraCo
     this.getColoresArray = function(coloresMascota) {
         return "Estos son los colores: " + this.coloresMascota.slice(', ');
     }
-
-    return getMascotaID();
-    
 
 }
 var paraEspecieMascota = document.getElementById("especie");
@@ -120,9 +109,7 @@ function NuevoGatos(paraEspecieMascota, paraRazaMascota, paraSexoMascota, paraCo
     this.getColoresArray = function(coloresMascota) {
         return "Estos son los colores: " + this.coloresMascota.slice(', ');
     }
-
-    return getMascotaID();
-
+    
 }
 
 var paraEspecieMascota = document.getElementById("especie");
@@ -142,9 +129,8 @@ function NuevoAnuncio(paramTipoAnuncio, paramComentAnuncio, paraFotosAnuncio, pa
             return "AnuncioID: " + this.anuncioID;
         }
         //
-        this.personaID = getPersonaID();
+        this.humanoID = getHumanoID();
         this.mascotaID = getMascotaID();
-
 
         this.getMascotaID = function(mascotaID) {
             return "MascotaID: " + this.mascotaID;
@@ -172,23 +158,11 @@ var paramCallePrincipal = document.getElementById("callePrincipal");
 var paramCalleEntreUno = document.getElementById("calleEntreUno");
 var paramCalleEntreDos = document.getElementById("calleEntreDos");
 
-
-
-// // // // //
-var btnSubmit = document.getElementById("btnSubmit");
-
-window.onload = function eventoCrear(){
-    // this.NuevoAnuncio.push("")
-    localStorage.setItem('anuncio-1', 'Miguel Antonio');
-    console.log( NuevoAnuncio[0]);
-}
-
-
 // "HARDCODEO" de parámetros del Anuncio N°1
-var miAnuncio_01 = new NuevoAnuncio(miNuevoAnuncio);
+var miAnuncio_01 = new NuevoAnuncio();
 
 // Ingreso de parámetros del Anuncio N°2
-var miAnuncio_02 = new NuevoAnuncio(miNuevoAnuncio);
+var miAnuncio_02 = new NuevoAnuncio();
  
 // Mostrar parámetro Perro o Gato del objeto miAnuncio
 console.log(miAnuncio_01.especieMascota);
@@ -201,11 +175,11 @@ console.log(miAnuncio_02.getDatosLista());
 
 // Mostrar variables (parámetro) Privadas del 1er Anuncio
 console.log(miAnuncio_01.getAnuncioID());
-console.log(miAnuncio_01.getPersonaID());
+console.log(miAnuncio_01.getHumanoID());
 
 // Mostrar variables (parámetro) Privadas del 2do Anuncio
 console.log(miAnuncio_02.getAnuncioID());
-console.log(miAnuncio_02.getPersonaID());
+console.log(miAnuncio_02.getHumanoID());
 
 // Transformar en array el parámetro 'coloresMascotas' que ingresa como string
 console.log(miAnuncio_01.getColoresArray());
