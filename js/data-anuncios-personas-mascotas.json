@@ -1,10 +1,11 @@
 [
+
     {
         "Nombre" : "Carolina",
         "Apellido": "García",
         "Email" : "carolinagarcia@gmail.com",
         "Celular" : 5491143332222,
-        "HumanoID" : ["H",1]
+        "PersonaID" : ["H",1]
     },
 
     {
@@ -12,7 +13,7 @@
         "Apellido": "Casco",
         "Email" : "sergiocasco@gmail.com",
         "Celular" : 5491156667777,
-        "HumanoID" : ["H",2]
+        "PersonaID" : ["H",2]
     },
 
     {

@@ -26,10 +26,6 @@
 					<span><i class="fas fa-sun"></i></span>
 					<span><i class="fas fa-moon"></i></span>
 				</button>
-				<ul>
-					<li><a href="#" type="button" data-toggle="modal" data-target="#modalCrearCuenta">crear cuenta</a></li>
-					<li><a href="#" type="button" data-toggle="modal" data-target="#modalIniciarSesion">iniciar sesión</a></li>
-				</ul>
 			</div>
 
 			<button class="navbar-toggler" type="button" data-toggle="collapse" 
@@ -44,10 +40,7 @@
 
 			<div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
 				<ul class="navbar-nav">
-					<li class="nav-item"><a href="mascotas-perdidas.html" class="nav-link">Perdidas</a></li>
-					<li class="nav-item"><a href="mascotas-encontradas.html" class="nav-link">Encontradas</a></li>
-					<li class="nav-item"><a href="nosotros.html" class="nav-link">Nosotros</a></li>
-					<li class="nav-item"><a href="contacto.html" class="nav-link">Contacto</a></li>
+					<li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
 					<li class="nav-item"><a href="crear-alerta.html" class="nav-link active">CREAR ALERTA</a></li>
 				</ul>
 			</div>
@@ -55,65 +48,7 @@
 		</nav>
 	</header> <!-- FIN DE Header-->
 
-	<!-- MODAL para Iniciar Sesión-->
-	<div class="modal fade" id="modalIniciarSesion" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered" role="document">
-		<div class="modal-content">
-			<div class="modal-header">
-			<h4 class="modal-title" id="modalLabel">Iniciar Sesión</h4>
-			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				<span aria-hidden="true">&times;</span>
-			</button>
-			</div>
-			<div class="modal-body">
-				<form id="formIniciarSesion">
-					<input type="text" placeholder="Nombre o Email" value="">
-					<input type="password" placeholder="Contraseña" value="">
-					<button type="submit" class="btn btn-md btn-secondary btn-block rounded-pill" data-dismiss="modal">INGRESAR</button>
-				</form>	
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-sm" data-dismiss="modal">¿Olvidaste tu Contraseña?</button> - 
-				<button type="button" class="btn btn-sm" data-dismiss="modal">¿Olvidaste tu Usuario?</button>
-			</div>
-		</div>
-		</div>
-	</div><!-- FIN de MODAL para Iniciar Sesión-->
-
-
-	<!-- MODAL para Crear Cuenta-->
-	<div class="modal fade" id="modalCrearCuenta" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
-		<div class="modal-content">
-			<div class="modal-header">
-			<h4 class="modal-title" id="modalLabel">Crear Cuenta</h4>
-			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				<span aria-hidden="true">&times;</span>
-			</button>
-			</div>
-			<div class="modal-body">
-				<form id="formCrearCuenta">
-					<input type="text" placeholder="Nombre" value="">
-					<input type="text" placeholder="Apellido" value="">
-					<input type="text" placeholder="Email" value="">
-					<input type="text" placeholder="Confirmar Email" value="">
-					
-					<input type="password" placeholder="Contraseña" value="">
-					<input type="password" placeholder="Confirmar Contraseña" value="">
-
-					<button type="submit" class="btn btn-md btn-secondary btn-block rounded-pill" data-dismiss="modal">CREAR CUENTA</button>
-				</form>	
-			</div>
-			<div class="modal-footer"> 
-				<button type="button" class="btn btn-sm" data-dismiss="modal">¿Necesitas Ayuda?</button> - 
-				<button type="button" class="btn btn-sm" data-dismiss="modal">Legales y Privacidad</button>
-			</div>
-		</div>
-		</div>
-	</div><!-- FIN de MODAL para Crear Cuenta-->
-
-
-
+	
 	<div class="slider">
 		 <h1>CREÁ UNA ALERTA DE MASCOTA PERDIDA O ENCONTRADA</h1>
  
@@ -412,7 +347,8 @@
 	</footer>	
 	
 	<script src="js/switch-lightdark.js"></script>
-	<script src="js/json_converter.js"></script>
+	<script src="js/data.js"></script>
+	<script src="js/scripts_func_constructoras.js"></script>
 	<script src="js/scripts_alertasmacoteras.js"></script>
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

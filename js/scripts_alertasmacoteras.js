@@ -32,181 +32,80 @@ PAGE >> https://lucianocotto.github.io/AlertasMascoteras-JS/crear-alerta.html
     Mensaje
     == PersonaID
     == MascotaID
+
+    // script_alertasmasoteras.js //
+    // script_func_constructoras.js //
+    // data-anuncios-personas-mascotas.json //
+
 */
 
-// // // // // // // // // //
-// ARRAYS DE OBJETOS PRINCIPALES //
-// // // // // // // // // //
+
+
+// // // // // // // // // // // // // // //
+//      ARRAYS y OBJETOS PRINCIPALES      //
+// // // // // // // // // // // // // // //
+
+let myArrayMuroAnuncios = [];
+let myArrayFichasAnuncios = [];
 
 let myArrayPersonas = [];
 let myArrayMascotas = [];
 let myArrayAnuncios = [];
 
+
+
 // // // // // // // // // //
-// FUNCIONES CONSTRUCTORAS //
+// FUNCIONES CONSTRUCTORAS      //
+// script_func_constructoras.js //
 // // // // // // // // // //
 
-// FUNCIÒN CONSTRUCTORA "Nuevo Gato"
-function NuevaPersona(paramNombrePersona, paramApellidoPersona, paramCelularPersona, paramEmailPersona){
-    
-    // Parámetros del PERSONA
-    
-    // Datos Privado
-    var personaID = Symbol.for('hid-');
-    this.getPersonaID = function(personaID) {
-        return "PersonaID: " + this.personaID;
-    } 
-    // Datos Públicos
-    this.nombrePersona = paramNombrePersona;
-    this.apellidoPersona = paramApellidoPersona;
-    this.celularPersona = paramCelularPersona;
-    this.emailPersonao = paramEmailPersona;
 
-    return getPersonaID();
-}
-var paramNombrePersona = document.getElementById("nombre");
-var paramApellidoPersona = document.getElementById("nombre");
-var paramCelularPersona = document.getElementById("celular");
-var paramEmailPersona = document.getElementById("email");
-
-
-// FUNCIÒN CONSTRUCTORA "Nuevo Perro"
-function NuevoPerro(paraEspecieMascota, paraRazaMascota, paraSexoMascota, paraColoresMascota){
-    
-    // Parámetros del PERRO
-
-    // Datos Privado
-    var mascotaID = Symbol.for('mpid-');
-    this.getMascotaID = function(mascotaID) {
-        return this.mascotaID;
-    }
-
-    // Datos Pùblico
-    this.especieMascota = paraEspecieMascota;
-    this.razaMascota = paraRazaMascota;
-    this.sexoMascota = paraSexoMascota;
-    this.coloresMascota = paraColoresMascota;
-
-    this.getColoresArray = function(coloresMascota) {
-        return "Estos son los colores: " + this.coloresMascota.slice(', ');
-    }
-
-    return getMascotaID();
-    
-
-}
-var paraEspecieMascota = document.getElementById("especie");
-var paraRazaMascota = document.getElementById("raza");
-var paraSexoMascota = document.getElementById("sexoMascota");
-var paraColoresMascota = document.getElementById("coloresMascota");
-
-
-
-// FUNCIÒN CONSTRUCTORA "Nuevo Gato"
-function NuevoGatos(paraEspecieMascota, paraRazaMascota, paraSexoMascota, paraColoresMascota){
-    
-    // Parámetros del GATO
-
-    // Datos Privado
-    var mascotaID = Symbol.for('mgid-');
-    this.getMascotaID = function(mascotaID) {
-        return "MascotaID: " + this.mascotaID;
-    }
-    // Datos Pùblico
-    this.especieMascota = paraEspecieMascota;
-    this.razaMascota = paraRazaMascota;
-    this.sexoMascota = paraSexoMascota;
-    this.coloresMascota = paraColoresMascota;
-    this.getColoresArray = function(coloresMascota) {
-        return "Estos son los colores: " + this.coloresMascota.slice(', ');
-    }
-
-    return getMascotaID();
-
+function showAnuncios(listaDeAnunciosRecibidos){
+    cardsList.innerHTML = "";
+    listaDeAnunciosRecibidos.forEach(function (card){
+        const card = buildAnuncioCard(anuncio);
+        cardsList.innerHTML += card;
+    })
 }
 
-var paraEspecieMascota = document.getElementById("especie");
-var paraRazaMascota = document.getElementById("raza");
-var paraSexoMascota = document.getElementById("sexo");
-var paraColoresMascota = document.getElementById("colores");
-
-
-// FUNCIÒN CONSTRUCTORA "Nuevo Anuncio"
-function NuevoAnuncio(paramTipoAnuncio, paramComentAnuncio, paraFotosAnuncio, paramFechaPerdida, paramFechaEncontrada,
-    paramBarrioCaba, paramCallePrincipal, paramCalleEntreUno, paramCalleEntreDos) {
-        // Parámetros del ANUNCIO
-
-        // ID del Anuncio Dato Privado - "HARDCODEADO"
-        var anuncioID = Symbol.for('mid-');   
-        this.getAnuncioID = function(anuncioID) {
-            return "AnuncioID: " + this.anuncioID;
-        }
-        //
-        this.personaID = getPersonaID();
-        this.mascotaID = getMascotaID();
-
-
-        this.getMascotaID = function(mascotaID) {
-            return "MascotaID: " + this.mascotaID;
-        }
-
-        // Datos Públicos
-        this.tipoAnuncio = paramTipoAnuncio;
-        this.comentarioAnuncio = paramComentAnuncio;
-        this.fotosAnuncio = paraFotosAnuncio;
-        this.fechaPerdida = paramFechaPerdida;
-        this.fechaEncontrada = paramFechaEncontrada;
-        this.barrioCaba = paramBarrioCaba;
-        this.callePrincipal = paramCallePrincipal;
-        this.calleEntreUno = paramCalleEntreUno;
-        this.calleEntreDos = paramCalleEntreDos;
-
-}
-var paramTipoAnuncio = document.getElementById("tipoAnuncio");
-var paramComentAnuncio = document.getElementById("comentAnuncio");
-var paraFotosAnuncio = document.getElementById("fotosAnuncio");
-var paramFechaPerdida = document.getElementById("fechaPerdida");
-var paramFechaEncontrada = document.getElementById("fechaEncontrada");
-var paramBarrioCaba = document.getElementById("barrioCaba");
-var paramCallePrincipal = document.getElementById("callePrincipal");
-var paramCalleEntreUno = document.getElementById("calleEntreUno");
-var paramCalleEntreDos = document.getElementById("calleEntreDos");
-
-
-
-// // // // //
-var btnSubmit = document.getElementById("btnSubmit");
-
-window.onload = function eventoCrear(){
-    // this.NuevoAnuncio.push("")
-    localStorage.setItem('anuncio-1', 'Miguel Antonio');
-    console.log( NuevoAnuncio[0]);
+function buildAnuncioCard(card) {
+    let div = '<div class="card"></div>'
+            
+    return div;
 }
 
 
-// "HARDCODEO" de parámetros del Anuncio N°1
-var miAnuncio_01 = new NuevoAnuncio(miNuevoAnuncio);
 
-// Ingreso de parámetros del Anuncio N°2
-var miAnuncio_02 = new NuevoAnuncio(miNuevoAnuncio);
- 
-// Mostrar parámetro Perro o Gato del objeto miAnuncio
-console.log(miAnuncio_01.especieMascota);
-console.log(miAnuncio_02.especieMascota);
-console.log(typeof miAnuncio_01.coloresMascota);
+// // // // // // // // // //
+//         EVENTOS         //
+// // // // // // // // // //
 
-// Mostrar con método todos los parámetros del objeto miAnuncio
-console.log(miAnuncio_01.getDatosLista());
-console.log(miAnuncio_02.getDatosLista());
+var btnSubmit = document.getElementById('btnSubmit');
 
-// Mostrar variables (parámetro) Privadas del 1er Anuncio
-console.log(miAnuncio_01.getAnuncioID());
-console.log(miAnuncio_01.getPersonaID());
+// Campos de Persona
+var paramNombrePersona = document.getElementById('nombre');
+var paramApellidoPersona = document.getElementById('apellido');
+var paramCelularPersona = document.getElementById('celular');
+var paramEmailPersona = document.getElementById('email');
 
-// Mostrar variables (parámetro) Privadas del 2do Anuncio
-console.log(miAnuncio_02.getAnuncioID());
-console.log(miAnuncio_02.getPersonaID());
+// Campos de Mascota
+var paraEspecieMascota = document.getElementById('especie');
+var paraRazaMascota = document.getElementById('raza');
+var paraSexoMascota = document.getElementById('sexo');
+var paraColoresMascota = document.getElementById('colores');
 
-// Transformar en array el parámetro 'coloresMascotas' que ingresa como string
-console.log(miAnuncio_01.getColoresArray());
-    
+// Campos de Anuncio
+var paramTipoAnuncio = document.getElementById('tipoAnuncio');
+var paramComentAnuncio = document.getElementById('comentAnuncio');
+var paraFotosAnuncio = document.getElementById('fotosAnuncio');
+var paramFechaPerdida = document.getElementById('fechaPerdida');
+var paramFechaEncontrada = document.getElementById('fechaEncontrada');
+var paramBarrioCaba = document.getElementById('barrioCaba');
+var paramCallePrincipal = document.getElementById('callePrincipal');
+var paramCalleEntreUno = document.getElementById('calleEntreUno');
+var paramCalleEntreDos = document.getElementById('calleEntreDos');
+
+
+
+/////////////////////////////////////////////
+// PRUEBAS
