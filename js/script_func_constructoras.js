@@ -7,15 +7,10 @@
 // FUNCIÒN CONSTRUCTORA "Nuevo Gato"
 function NuevaPersona(paramNombrePersona, paramApellidoPersona, paramCelularPersona, paramEmailPersona){
     
-    // Parámetros del PERSONA
     let infoPersona = [];
     // Datos Privado
-    var personaID = Symbol.for('hid-');
-    this.getPersonaID = function(personaID) {
-        return "PersonaID: " + this.personaID;
+    var personaID = "";
 
-    } 
-    
     // Datos Públicos
     this.nombrePersona = paramNombrePersona;
     this.apellidoPersona = paramApellidoPersona;
@@ -26,17 +21,11 @@ function NuevaPersona(paramNombrePersona, paramApellidoPersona, paramCelularPers
 
 
 
-
 // FUNCIÒN CONSTRUCTORA "Nuevo Perro"
 function NuevoPerro(paraEspecieMascota, paraRazaMascota, paraSexoMascota, paraColoresMascota){
     
-    // Parámetros del PERRO
-
     // Datos Privado
-    var mascotaID = Symbol.for('mpid-');
-    this.getMascotaID = function(mascotaID) {
-        return this.mascotaID;
-    }
+    var mascotaID = "";
 
     // Datos Pùblico
     this.especieMascota = paraEspecieMascota;
@@ -45,7 +34,6 @@ function NuevoPerro(paraEspecieMascota, paraRazaMascota, paraSexoMascota, paraCo
     this.coloresMascota = paraColoresMascota;
 
 }
-
 
 
 
@@ -55,19 +43,15 @@ function NuevoGatos(paraEspecieMascota, paraRazaMascota, paraSexoMascota, paraCo
     // Parámetros del GATO
 
     // Datos Privado
-    var mascotaID = Symbol.for('mgid-');
-    this.getMascotaID = function(mascotaID) {
-        return "MascotaID: " + this.mascotaID;
-    }
+    var mascotaID = "";
+
     // Datos Pùblico
     this.especieMascota = paraEspecieMascota;
     this.razaMascota = paraRazaMascota;
     this.sexoMascota = paraSexoMascota;
     this.coloresMascota = paraColoresMascota;
 
-
 }
-
 
 
 
@@ -77,15 +61,11 @@ function NuevoAnuncio(paramTipoAnuncio, paramComentAnuncio, paraFotosAnuncio, pa
         // Parámetros del ANUNCIO
 
         // ID del Anuncio Dato Privado - "HARDCODEADO"
-        var anuncioID = Symbol.for('mid-');   
-        this.getAnuncioID = function(anuncioID) {
-            return "AnuncioID: " + this.anuncioID;
-        }
-
+        var anuncioID = "";   
+        
         //
         this.personaID = getPersonaID();
         this.mascotaID = getMascotaID();
-
 
         // Datos Públicos
         this.tipoAnuncio = paramTipoAnuncio;

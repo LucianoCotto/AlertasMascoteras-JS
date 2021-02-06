@@ -77,8 +77,7 @@ function buildAnuncioCard(card) {
 
 
 // // // // // // // // // //
-//         EVENTOS         //
-// // // // // // // // // //
+// INICIALIZACIÓN
 
 var btnSubmit = document.getElementById('btnSubmit');
 
